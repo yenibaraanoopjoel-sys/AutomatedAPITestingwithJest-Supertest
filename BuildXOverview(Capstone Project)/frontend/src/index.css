@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Brand Colors */
+  --clr-primary: #6366f1; /* Indigo */
+  --clr-primary-glow: rgba(99, 102, 241, 0.5);
+  --clr-secondary: #a855f7; /* Purple */
+  --clr-accent: #14b8a6; /* Teal */
+
+  /* Dark Theme Colors */
+  --clr-bg: #09090b;
+  --clr-bg-card: rgba(24, 24, 27, 0.7);
+  --clr-text: #fafafa;
+  --clr-text-muted: #a1a1aa;
+  
+  /* Borders & UI Elements */
+  --clr-border: rgba(255, 255, 255, 0.1);
+  --clr-input: rgba(39, 39, 42, 0.6);
+  --clr-input-focus: rgba(99, 102, 241, 0.3);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary));
+  --gradient-bg: radial-gradient(circle at top left, rgba(99, 102, 241, 0.15), transparent 40%), radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.1), transparent 40%);
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Shadows & Glass */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px var(--clr-primary-glow);
+  --glass-blur: blur(12px);
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--clr-bg);
+  background-image: var(--gradient-bg);
+  background-attachment: fixed;
+  color: var(--clr-text);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-heading);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* Luxurious Card Class */
+.card-glass {
+  background: var(--clr-bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Base utility for dynamic gradient text */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
