@@ -1,0 +1,77 @@
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.admin-stat-card {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.admin-stat-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.admin-stat-info p {
+  color: var(--clr-text-muted);
+  font-size: 0.9rem;
+}
+
+.admin-tables {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .admin-tables {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-section {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.data-table th, .data-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.data-table th {
+  color: var(--clr-text-muted);
+  font-weight: 500;
+}
+
+.activity-logs {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.activity-logs li {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--clr-border);
+}

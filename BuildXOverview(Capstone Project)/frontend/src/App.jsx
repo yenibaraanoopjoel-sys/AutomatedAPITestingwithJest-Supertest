@@ -9,21 +9,13 @@ import Ideas from './pages/Ideas';
 import SkillSwap from './pages/SkillSwap';
 import ProjectWorkspace from './pages/ProjectWorkspace';
 import Wallet from './pages/Wallet';
+import Challenges from './pages/Challenges';
+import Chat from './pages/Chat';
+import VideoSession from './pages/VideoSession';
+import Admin from './pages/Admin';
+import Profile from './pages/Profile';
 import MainLayout from './layouts/MainLayout';
 import './index.css';
-
-// Generating simple luxurious placeholders for the remaining sections inline to ensure project completeness.
-const PlaceholderPage = ({ title, icon }) => (
-  <div style={{ padding: '3rem', textAlign: 'center', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-    <div style={{ background: 'var(--clr-primary-glow)', padding: '2rem', borderRadius: '50%', marginBottom: '2rem' }}>
-      <span style={{ fontSize: '4rem' }}>{icon}</span>
-    </div>
-    <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }} className="text-gradient">{title}</h1>
-    <p style={{ color: 'var(--clr-text-muted)', fontSize: '1.2rem', maxWidth: '600px' }}>
-      This module is fully styled and integrated securely with our backend schema. Live features are deploying shortly.
-    </p>
-  </div>
-);
 
 function App() {
   return (
@@ -40,13 +32,11 @@ function App() {
             <Route path="/skill-swap" element={<SkillSwap />} />
             <Route path="/projects" element={<ProjectWorkspace />} />
             <Route path="/wallet" element={<Wallet />} />
-            
-            {/* Placeholders for remaining required modules */}
-            <Route path="/challenges" element={<PlaceholderPage title="Challenges & Quizzes" icon="🏆" />} />
-            <Route path="/chat" element={<PlaceholderPage title="Team Chat & Messaging" icon="💬" />} />
-            <Route path="/video" element={<PlaceholderPage title="Live Video Sessions" icon="📹" />} />
-            <Route path="/admin" element={<PlaceholderPage title="Admin Dashboard" icon="🛡️" />} />
-            <Route path="/profile" element={<PlaceholderPage title="Profile Settings" icon="⚙️" />} />
+            <Route path="/challenges" element={<Challenges />} />
+            <Route path="/chat" element={<Chat />} />
+            <Route path="/video" element={<VideoSession />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/profile" element={<Profile />} />
           </Route>
         </Routes>
       </div>

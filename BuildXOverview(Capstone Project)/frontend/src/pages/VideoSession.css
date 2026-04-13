@@ -1,0 +1,151 @@
+.video-session-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 120px);
+}
+
+.video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.video-header h2 {
+  font-size: 1.5rem;
+}
+
+.video-main-layout {
+  display: flex;
+  flex: 1;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+
+.video-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+.video-feed {
+  background: #000;
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--clr-border);
+}
+
+.video-feed.speaker {
+  border: 2px solid var(--clr-accent);
+}
+
+.feed-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.camera-off-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.large-avatar {
+  width: 80px;
+  height: 80px;
+  font-size: 2.5rem;
+}
+
+.feed-label {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.video-sidebar {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.video-chat-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.vc-msg {
+  font-size: 0.9rem;
+}
+
+.vc-input {
+  display: flex;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.vc-input input {
+  flex: 1;
+  background: var(--clr-input);
+  border: 1px solid var(--clr-border);
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  color: white;
+}
+
+.ai-summary-box {
+  padding: 1rem;
+  border-top: 1px solid var(--clr-border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.video-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.control-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.control-btn.danger {
+  background: #ef4444;
+}
+
+.control-btn.end-call {
+  background: #ef4444;
+}
